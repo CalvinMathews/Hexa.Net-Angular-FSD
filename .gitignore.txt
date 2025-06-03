@@ -1,0 +1,52 @@
+# Build results
+bin/
+obj/
+out/
+
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+
+.vscode/
+
+# Visual Studio folder
+.vs/
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+
+Generated_Code/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Others
+*.tmp
+*.bak
+*.swp
+*.old
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Publish folders
+publish/
