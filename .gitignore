@@ -3,13 +3,13 @@ bin/
 obj/
 out/
 
-
+# User-specific files
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-
+# VS Code settings
 .vscode/
 
 # Visual Studio folder
@@ -20,7 +20,7 @@ out/
 packages/
 *.snupkg
 
-
+# Auto-generated files
 Generated_Code/
 
 # Logs
@@ -50,3 +50,4 @@ TestResults/
 
 # Publish folders
 publish/
+ 
