@@ -1,0 +1,31 @@
+﻿@model AppUI.Models.ParticipantEventDetails
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <title>Add New Participant Event</title>
+</head>
+<body>
+    <form asp-route="Register" method="post">
+        <div>
+            <label asp-for="ParticipantId">Participant Id:</label>
+            <input type="number" asp-for="ParticipantId" placeholder="Please Enter Participant Id">
+        </div>
+        <div>
+            <label asp-for="ParticipantEmailId">Email Id:</label>
+            <input type="text" asp-for="ParticipantEmailId" placeholder="Please Enter Email Id">
+        </div>
+        <div>
+            <label asp-for="EventId">Event Id:</label>
+            <input type="number" asp-for="EventId" placeholder="Please Enter Event Id">
+        </div>
+        <div>
+            <label asp-for="isAttended">Is Attended:</label>
+            <input type="datetime" asp-for="isAttended" placeholder="Please Enter the Status">
+        </div>
+        <div>
+            <input type="submit" value="Add Participant Event">
+        </div>
+    </form>
+</body>
+</html>

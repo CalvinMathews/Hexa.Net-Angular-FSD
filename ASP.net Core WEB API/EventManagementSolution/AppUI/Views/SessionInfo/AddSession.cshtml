@@ -1,0 +1,49 @@
+﻿@model AppUI.Models.Session
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <title>Add New Session</title>
+</head>
+<body>
+    <h2>Add New Session</h2>
+
+    <form asp-route="SaveSession" method="post">
+        <div>
+            <label asp-for="Id">Session ID:</label>
+            <input type="number" asp-for="Id" placeholder="Enter Session ID" />
+        </div>
+        <div>
+            <label asp-for="EId">Event ID:</label>
+            <input type="number" asp-for="EId" placeholder="Enter Event ID" />
+        </div>
+        <div>
+            <label asp-for="Title">Session Title:</label>
+            <input type="text" asp-for="Title" placeholder="Enter Session Title" />
+        </div>
+        <div>
+            <label asp-for="SId">Speaker ID:</label>
+            <input type="number" asp-for="SId" placeholder="Enter Speaker ID" />
+        </div>
+        <div>
+            <label asp-for="Desc">Description:</label>
+            <input type="text" asp-for="Desc" placeholder="Enter Description" />
+        </div>
+        <div>
+            <label asp-for="Start">Start Time:</label>
+            <input type="datetime-local" asp-for="Start" />
+        </div>
+        <div>
+            <label asp-for="End">End Time:</label>
+            <input type="datetime-local" asp-for="End" />
+        </div>
+        <div>
+            <label asp-for="Url">Session URL:</label>
+            <input type="url" asp-for="Url" placeholder="Enter URL" />
+        </div>
+        <div>
+            <input type="submit" value="Add Session" />
+        </div>
+    </form>
+</body>
+</html>

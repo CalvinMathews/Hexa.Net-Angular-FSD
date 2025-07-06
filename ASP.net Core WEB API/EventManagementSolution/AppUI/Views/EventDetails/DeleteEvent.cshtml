@@ -1,0 +1,42 @@
+﻿@model AppUI.Models.EventDetails
+
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <title>Delete Event Confirmtion</title>
+</head>
+<body>
+    <h2>Do You Want to Delete a Event:@Model.EventName</h2>
+    <form asp-route="RemoveEvent" method="post">
+        <div>
+            <label asp-for="EventId">Event Id:</label>
+            <input type="number" asp-for="EventId" placeholder="Please Enter Event Id" readonly>
+        </div>
+        <div>
+            <label asp-for="EventName">Event Name:</label>
+            <input type="text" asp-for="EventName" placeholder="Please Enter Event Name" readonly>
+        </div>
+        <div>
+            <label asp-for="EventCategory">Event Category:</label>
+            <input type="text" asp-for="EventCategory" placeholder="Please Enter a Category" readonly>
+        </div>
+        <div>
+            <label asp-for="EventDate">Event Date:</label>
+            <input type="datetime" asp-for="EventDate" placeholder="Please Date of Event" readonly>
+        </div>
+        <div>
+            <label asp-for="Description">Description:</label>
+            <input type="text" asp-for="Description" placeholder="Please Enter Description" readonly>
+        </div>
+        <div>
+            <label asp-for="Status">Status:</label>
+            <input type="text" asp-for="Status" placeholder="Please Enter Status" readonly>
+        </div>
+        <div>
+            <input type="submit" value="Delete Event">
+            <a asp-route="EventList">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>

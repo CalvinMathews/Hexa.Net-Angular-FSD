@@ -1,0 +1,30 @@
+﻿@model List<AppUI.Models.ParticipantEventDetails>
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <title>List of Participant Events</title>
+</head>
+<body>
+
+    <a asp-route="Register">Add New Participant Event</a>
+    <h3>List of Participant Event</h3>
+    <table>
+        <tr><th>PARTICIPANT ID</th><th>PARTICIPANT EMAILID</th><th>EVENT ID</th><th>IS ATTENDED</th></tr>
+        @foreach (var participantEventDetails in Model)
+        {
+            <tr>
+                <td>@participantEventDetails.ParticipantId</td>
+                <td>@participantEventDetails.ParticipantEmailId</td>
+                <td>@participantEventDetails.EventId</td>
+                <td>@participantEventDetails.isAttended</td>
+
+                <td><a asp-route="Delete" asp-route-id="@participantEventDetails.ParticipantId">Delete</a></td>
+                <td><a asp-route="Update" asp-route-id="@participantEventDetails.ParticipantId">Update</a></td>
+                <td><a asp-route="GetById" asp-route-id="@participantEventDetails.ParticipantId">Details</a></td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>
