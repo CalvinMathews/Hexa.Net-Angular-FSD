@@ -1,0 +1,60 @@
+﻿@model ClientService_MVC.Models.ClientInfo
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h2>Add New Client</h2>
+
+<form action="/Clients/Add" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="ClientId">Client ID:</label></td>
+            <td><input asp-for="ClientId" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="CompanyName">Company Name:</label></td>
+            <td><input asp-for="CompanyName" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="WebUrl">Website URL:</label></td>
+            <td><input asp-for="WebUrl" type="url" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email">Email:</label></td>
+            <td><input asp-for="Email" type="email" required /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Category">Category:</label></td>
+            <td>
+                <select asp-for="Category" required>
+                    <option value="">Select Category</option>
+                    <option value="Low_Level_Managed_IT_Services">Low Level Managed IT Services</option>
+                    <option value="Mid_Level_Managed_IT_Services">Mid Level Managed IT Services</option>
+                    <option value="High_Level_Managed_IT_Services">High Level Managed IT Services</option>
+                    <option value="On-Demand_IT_Services">On-Demand IT Services</option>
+                    <option value="Hardware_Support">Hardware Support</option>
+                    <option value="Software Services">Software Services</option>
+                    <option value="Network_Management">Network Management</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Standard">Standard:</label></td>
+            <td>
+                <select asp-for="Standard" required>
+                    <option value="">Select Standard</option>
+                    <option value="CMMI1">CMMI1</option>
+                    <option value="CMMI2">CMMI2</option>
+                    <option value="CMMI3">CMMI3</option>
+                    <option value="CMMI4">CMMI4</option>
+                    <option value="CMMI5">CMMI5</option>
+                    <option value="ISO">ISO</option>
+                    <option value="None">None</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Save:</button>
+                <a href="/Clients/ShowAll">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>

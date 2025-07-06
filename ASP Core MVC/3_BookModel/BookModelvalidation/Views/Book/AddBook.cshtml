@@ -1,0 +1,45 @@
+﻿@model BookModelvalidation.Models.Book
+
+<html>
+<head>
+    <title>Add New Book</title>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <a class="btn btn-secondary" asp-route="List">Show All Books</a>
+        <h3>New Book</h3>
+        <form asp-route="SaveBook" method="post">
+
+            <div>
+                <label class="form-label" asp-for="Isbn">ISBN:</label><div>
+                    <div><input class="form-control" type="number" asp-for="Isbn" placeholder="Enter ISBN" /> </div>
+                    <div><span asp-validation-for="Isbn" class="text-danger"></span> </div>
+
+                    <div>
+                        <label class="form-label" asp-for="BookName">BOOK NAME:</label><div>
+                            <div><input class="form-control" type="text" asp-for="BookName" placeholder="Enter Book Name" /> </div>
+                            <div><span asp-validation-for="BookName" class="text-danger"></span>  </div>
+
+                    <div>
+                        <label class="form-label" asp-for="AuthorName">AUTHOR NAME:</label><div>
+                            <div><input class="form-control" type="text" asp-for="AuthorName" placeholder="Enter Author Name" /> </div>
+                            <div><span asp-validation-for="AuthorName" class="text-danger"></span>  </div>
+
+                    <div>
+                        <label class="form-label" asp-for="PublishedDate">PUBLISHED DATE:</label><div>
+                            <div><input class="form-control" type="datetime" asp-for="PublishedDate" placeholder="Enter Date of Publication" /> </div>
+                            <div><span asp-validation-for="PublishedDate" class="text-danger"></span>  </div>
+
+                    <div>
+                        <label class="form-label" asp-for="BookUrl">BOOK URL:</label><div>
+                            <div><input class="form-control" type="text" asp-for="BookUrl" placeholder="Enter Web URL" /> </div>
+                            <div><span asp-validation-for="BookUrl" class="text-danger"></span>  </div
+
+                    <div>
+                        <input class="btn btn-success" type="submit" value="Add Book">
+                    </div>
+        </form>
+    </div>
+</body>
+</html>

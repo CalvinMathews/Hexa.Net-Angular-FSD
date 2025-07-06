@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMSApp", "LMSApp\LMSApp.csproj", "{3BE396E9-14D9-4857-9731-F0C67E09E8AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BE396E9-14D9-4857-9731-F0C67E09E8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE396E9-14D9-4857-9731-F0C67E09E8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE396E9-14D9-4857-9731-F0C67E09E8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE396E9-14D9-4857-9731-F0C67E09E8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0C18B6C-7E64-4E09-95E6-8BA9AD34D446}
+	EndGlobalSection
+EndGlobal

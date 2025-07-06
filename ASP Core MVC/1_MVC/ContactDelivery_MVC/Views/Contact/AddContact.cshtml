@@ -1,0 +1,49 @@
+﻿@model ContactDelivery_MVC.Models.ContactInfo
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Contact</title>
+    <style>
+        label { display: inline-block; width: 150px; margin-bottom: 5px; }
+        input { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h3>Add New Contact</h3>
+
+    <form asp-action="AddContact" method="post">
+        <div>
+            <label asp-for="FirstName">First Name:</label>
+            <input asp-for="FirstName" placeholder="Enter First Name" />
+        </div>
+        <div>
+            <label asp-for="LastName">Last Name:</label>
+            <input asp-for="LastName" placeholder="Enter Last Name" />
+        </div>
+        <div>
+            <label asp-for="CompanyName">Company:</label>
+            <input asp-for="CompanyName" placeholder="Enter Company Name" />
+        </div>
+        <div>
+            <label asp-for="EmailId">Email:</label>
+            <input asp-for="EmailId" placeholder="Enter Email ID" />
+        </div>
+        <div>
+            <label asp-for="MobileNo">Mobile No:</label>
+            <input asp-for="MobileNo" placeholder="Enter Mobile Number" />
+        </div>
+        <div>
+            <label asp-for="Designation">Designation:</label>
+            <input asp-for="Designation" placeholder="Enter Designation" />
+        </div>
+        <div>
+            <input type="submit" value="Save Contact" />
+        </div>
+    </form>
+
+    <br />
+    <a asp-action="ShowContacts">Show All Contacts</a>
+</body>
+</html>

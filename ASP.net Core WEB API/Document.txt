@@ -1,0 +1,8 @@
+This is the complete case study of ASP.NET core web API. 
+Learnt how to implement a complete Backend of an application.
+For the final case study 
+I plan to do the following 
+Use MVC (for admins becoz we learned that as well)
+Use Angular (For Customers)
+That way we implement both. What say my Brain :) :) 
+Will ask sir for approval
