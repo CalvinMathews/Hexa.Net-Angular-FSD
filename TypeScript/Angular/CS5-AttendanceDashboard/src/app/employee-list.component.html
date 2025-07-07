@@ -1,0 +1,36 @@
+    <div *ngIf="employees.length === 0">
+  No employees found.
+</div>
+
+<table *ngIf="employees.length > 0" border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees"
+        [ngClass]="{
+          'present': emp.isPresent,
+          'absent': !emp.isPresent && !emp.workFromHome,
+          'wfh': emp.workFromHome
+        }">
+      <td [ngStyle]="{
+            'font-weight': emp.isPresent ? 'bold' : 'normal'
+          }">{{ emp.name }}</td>
+      <td [ngStyle]="{
+      'color': emp.department === Department.IT ? 'blue' :
+                emp.department === Department.HR ? 'purple' :
+                'orange'
+    }">{{ emp.department }}</td>
+
+      <td>
+        <span *ngIf="emp.isPresent">Present</span>
+        <span *ngIf="!emp.isPresent && emp.workFromHome">Work From Home</span>
+        <span *ngIf="!emp.isPresent && !emp.workFromHome">Absent</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
